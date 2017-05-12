@@ -4,7 +4,7 @@ describe('clientes', () => {
   let manuelPromo
   let manuelPromoAdHoc
 
-  beforeEach(function () {
+  beforeEach(() => {
     manuel = new ClientePromocion(new ClienteSafeShop(new Cliente(), 120))
     manuelPromo = new ClientePromocion(new Cliente())
     manuelPromoAdHoc = new Cliente().promocion()
