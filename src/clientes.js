@@ -23,6 +23,33 @@ class Cliente {
     comprar(monto) {
         this.deuda = this.deuda + monto
     }
+
+    safeShop(montoMaximo) {
+        let safeShop = new Cliente()
+        safeShop.montoMaximo = montoMaximo
+        safeShop.cliente = this
+        safeShop.comprar = (monto) => {
+            if (monto > montoMaximo) {
+                throw new Error("No debe comprar por mas de " + montoMaximo)
+            }
+            this.comprar(monto)
+        }
+        return safeShop
+    }
+
+    promocion() {
+        let promocion = new Cliente()
+        promocion.cliente = this
+        promocion.comprar = (monto) => {
+            this.comprar(monto)
+            if (monto > 50) {
+                this.agregarPuntos(15)
+            }
+        }
+        promocion.getPuntos = () => this.getPuntos()
+        return promocion
+    }
+
 }
 
 class ClienteDecorator {
