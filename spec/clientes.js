@@ -24,4 +24,12 @@ describe('clientes', () => {
     manuelSafeShop.comprar(30)
     expect(30).toBe(manuelSafeShop.getDeuda())
   })   
+  it('manuel con promocion y safe shop compra por mas de 120 y tira error, por lo que no suma puntos', () => {
+    expect( () => manuel.comprar(150)).toThrow(new Error("No debe comprar por mas de 120"))
+    expect(0).toBe(manuel.getPuntos())
+  }) 
+  it('manuel con promocion y safe shop compra por menos de 120 y pasa ok, por lo que suma puntos', () => {
+    manuel.comprar(90)
+    expect(15).toBe(manuel.getPuntos())
+  }) 
 })

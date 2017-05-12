@@ -38,7 +38,7 @@ class ClienteDecorator {
     getPuntos() {
         return this.cliente.getPuntos()
     }
-    agregarPuntos(_puntos) {
+    agregarPuntos(puntos) {
         this.cliente.agregarPuntos(puntos)
     }
 }
@@ -49,7 +49,6 @@ class ClienteSafeShop extends ClienteDecorator {
         this.montoMaximo = _montoMaximo
     }
     comprar(monto) {
-        console.log(this.montoMaximo)
         if (monto > this.montoMaximo) {
             throw new Error("No debe comprar por mas de " + this.montoMaximo)
         }
@@ -59,6 +58,7 @@ class ClienteSafeShop extends ClienteDecorator {
 
 class ClientePromocion extends ClienteDecorator {
     comprar(monto) {
+        this.cliente.comprar(monto)
         if (monto > 50) {
             this.cliente.agregarPuntos(15)
         }
