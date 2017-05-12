@@ -24,17 +24,6 @@ class Cliente {
         this.deuda = this.deuda + monto
     }
 
-    promocion() {
-        let promocion = new ClienteDecorator(this)
-        promocion.comprar = (monto) => {
-            this.comprar(monto)
-            if (monto > 50) {
-                this.agregarPuntos(15)
-            }
-        }
-        return promocion
-    }
-
 }
 
 class ClienteDecorator {
@@ -76,4 +65,3 @@ class ClientePromocion extends ClienteDecorator {
         }
     }
 }
-
