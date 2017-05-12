@@ -1,10 +1,7 @@
 
 # Clientes de una Tarjeta de Crédito
 
-Ejercicio que muestra cómo se implementa un decorator en ECMAScript 6, en forma muy similar a otros lenguajes "basados en clases". Tiene embebido el runner de Jasmine, por lo que para ejecutarlo se debe
-
-* clonar el repo o bajar directamente el zip
-* posicionarse en el directorio raíz donde se bajó el proyecto y abrir el archivo SpecRunner.html en un navegador
+Ejercicio que muestra cómo se implementa un decorator en ECMAScript 6, en forma muy similar a otros lenguajes "basados en clases". 
 
 ## El dominio
 
@@ -14,5 +11,20 @@ Tenemos el [enunciado](https://docs.google.com/document/d/1Ijz8Pe-ci6bYwbxIn-VZD
 * un cliente con safe shop que evita compras por más de un monto
 * un cliente con promoción que suma puntos por cada compra mayor a un monto
 * se pueden combinar safe shop y promoción
+
+La implementación se hace en el archivo [clientes](src/clientes.js), mediante una clase que representa al cliente, una clase decoradora abstracta y dos subclases decoradoras que implementan el safe shop y la promoción.
+
+## Cómo se evalúa
+
+El proyecto viene con tests hechos en [Jasmine](https://jasmine.github.io/). Para facilitar la introducción al lector ya están copiados en el presente repositorio. Para correr los tests
+
+* Clonar el proyecto (o descargarlo como zip)
+
+```bash
+# git clone https://github.com/uqbar-project/clientesDecorator-es6
+```
+
+* Abrir el archivo [SpecRunner.html](SpecRunner.html) en un navegador
+* Eso corre todos los tests definidos en la carpeta spec.
 
 
