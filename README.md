@@ -3,6 +3,8 @@
 
 Ejercicio que muestra cómo se implementa un decorator en ECMAScript 6, en forma muy similar a otros lenguajes "basados en clases". 
 
+<img src="img/customer.png" height="100" width="100"/>
+
 ## El dominio
 
 Tenemos el [enunciado](https://docs.google.com/document/d/1Ijz8Pe-ci6bYwbxIn-VZDV1QcijDy2JuAUQtohNX0oA/edit) que consiste en
