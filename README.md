@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/uqbar-project/clientesDecorator-es6.svg?branch=master)](https://travis-ci.org/uqbar-project/clientesDecorator-es6)
 
-Ejercicio que muestra cómo se implementa un decorator en ECMAScript 6, en forma muy similar a otros lenguajes "basados en clases". 
+Ejercicio que muestra cómo se implementa un decorator en ECMAScript 6. 
 
 <img src="img/customer.png" height="100" width="100"/>
 
